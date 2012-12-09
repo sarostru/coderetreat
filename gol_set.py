@@ -77,10 +77,10 @@ class GOF(object):
 			x,y = c
 			G[y-ymin][x-xmin] = 1
 		out = "-----------------------\n"
-		out = out + str((xmin,ymin))+"\n"
+		out = out + "(xmin,ymin) = "+str((xmin,ymin))+"\n"
 		for r in G:
-			out = out + str(r)+"\n"
-		out = out + "               "+str((xmax,ymax))+"\n"
+			out = out + " ".join([str(v) for v in r])+"\n"
+		out = out + "(xmax,ymax) = "+str((xmax,ymax))+"\n"
 		return out
 
 
